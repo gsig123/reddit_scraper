@@ -11,13 +11,13 @@ This simple scraper was created for an academic project.
 
 ## Usage
 ```python
-// Create your virtual environment, f.x.:
+# Create your virtual environment, f.x.:
 python3 -m venv reddit-scrape
-// Activate it, f.x.:
+# Activate it, f.x.:
 . reddit-scrape/bin/activate
-// Install dependencies 
+# Install dependencies 
 pip install -r requirements.txt 
-// Run the scraper 
+# Run the scraper 
 python scraper <subreddit-name> <number-of-posts>
 ```
 
