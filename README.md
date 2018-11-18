@@ -21,5 +21,7 @@ pip install -r requirements.txt
 python scraper <subreddit-name> <number-of-posts>
 ```
 
+The script creates two files: `<subreddit-name>_posts.csv` and `<subreddit-name>_comments.csv`
+
  
 
