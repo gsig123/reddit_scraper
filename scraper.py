@@ -4,11 +4,12 @@ import datetime as dt
 from KEYS import *
 import sys 
 
-REDDIT_API_CLIENT = praw.Reddit(client_id=PERSONAL_USE_SCRIPT, \
-                     client_secret=SECRET, \
-                     user_agent=NAME, \
-                     username=DEVELOPER, \
-                     password=PASSWORD)
+REDDIT_API_CLIENT = praw.Reddit(client_id=PERSONAL_USE_SCRIPT, 
+                                client_secret=SECRET,
+                                user_agent=NAME, 
+                                username=DEVELOPER,
+                                password=PASSWORD,
+                               )
 
 
 def get_date(created):
