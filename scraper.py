@@ -42,12 +42,15 @@ def scrape_data(subreddit, number_of_posts):
         topics_dict["created"].append(submission.created)
         topics_dict["body"].append(submission.selftext)
         for top_level_comment in submission.comments:
-            comments_dict["body"].append(top_level_comment.body)
-            comments_dict["created"].append(top_level_comment.created)
-            comments_dict["id"].append(top_level_comment.id)
+            if hasattr(top_level_comment, "body"):
+                comments_dict["body"].append(top_level_comment.body)
+                comments_dict["created"].append(top_level_comment.created)
+                comments_dict["id"].append(top_level_comment.id)
 
     topics_data = pd.DataFrame(topics_dict)
     comments_data = pd.DataFrame(comments_dict)
+    topics_data.index.name = 'index'
+    comments_data.index.name = 'index'
 
     _timestamp = topics_data["created"].apply(get_date)
     _timestamp_2 = comments_data["created"].apply(get_date)
